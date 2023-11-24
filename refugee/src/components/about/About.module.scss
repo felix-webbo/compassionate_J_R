@@ -1,0 +1,164 @@
+@import "../styles/constant.scss";
+.wrapper {
+  .aboutImage {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .text {
+      position: absolute;
+      top: 100%;
+      align-items: center;
+      text-align: center;
+      padding: 5rem;
+
+      p {
+        color: #a01118;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .statistics {
+    h1 {
+      background-color: $colorTwo;
+      width: 100%;
+      border-radius: 5rem 5rem 0 0;
+      text-align: center;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+
+      @media (max-width: $md) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: $sm) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stat {
+      border: 1px solid $blackColor;
+      border-radius: 0 0 5rem 5rem;
+      position: relative;
+      transition: $transition;
+
+      &:hover {
+        background-color: $color-primary;
+        border-radius: 0 0 5rem 5rem;
+        border: none;
+        top: -0.5rem;
+      }
+
+      h3 {
+        text-align: center;
+        background-color: $colorTwo;
+        border-radius: 0 0 5rem 5rem;
+        padding: 0.5rem;
+      }
+
+      p {
+        padding: 0.5rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .people {
+    .creativeTeam {
+      background-color: $colorTwo;
+      width: 100%;
+      border-radius: 5rem 5rem 0 0;
+      text-align: center;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    h1,
+    p {
+      text-align: center;
+    }
+
+    .coTeam {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+
+      @media (max-width: $md) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: $sm) {
+        grid-template-columns: 1fr;
+      }
+      .team {
+        .socials {
+          text-align: center;
+
+          a {
+            text-decoration: none;
+          }
+
+          .emailIcon {
+            font-size: 3rem;
+            color: $greyText;
+          }
+          .whatsappIcon {
+            font-size: 2.5rem;
+            color: green;
+          }
+        }
+        img {
+          border-radius: 3rem;
+          transition: $transition;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .card {
+          opacity: 0;
+          transition: $transition;
+
+          &:hover {
+            opacity: 1;
+          }
+          .name {
+            background-color: $colorTwo;
+            border-radius: 0 0 3rem 3rem;
+
+            h3,
+            h5 {
+              text-align: center;
+              padding: 0.5rem;
+            }
+          }
+          position: relative;
+          bottom: 40%;
+          background-color: $color-primary;
+          height: 40%;
+          border-radius: 0 0 3rem 3rem;
+
+          p {
+            text-align: center;
+            font-size: 1rem;
+            user-select: none;
+            padding: 1rem;
+          }
+
+          .line2 {
+            height: 0.1rem;
+            width: 100%;
+            background-color: #a01118;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import "../styles/constant.scss";
+.footer {
+  padding: 4rem 6rem;
+  background: linear-gradient(rgb(207, 134, 38), rgb(190, 65, 7));
+  color: #fff;
+
+  .top {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .imageLogo {
+      img {
+        width: 35%;
+      }
+      p {
+        position: relative;
+        bottom: 2rem;
+      }
+    }
+    .icons {
+      a {
+        padding: 0.3rem;
+        color: black;
+        font-size: 1.5rem;
+        position: relative;
+        transition: $transition;
+
+        &:hover {
+          color: orange;
+          top: -0.3rem;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    padding-top: 2rem;
+    text-align: start;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-size: 1.3rem;
+        padding: 1rem 0 0.8rem 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fafafa;
+        padding-bottom: 0.4rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    .footer {
+      padding: 4rem 2rem;
+    }
+
+    .footer i {
+      margin: 1rem 1rem 0 0;
+    }
+
+    .bottom div {
+      width: 50%;
+    }
+  }
+}

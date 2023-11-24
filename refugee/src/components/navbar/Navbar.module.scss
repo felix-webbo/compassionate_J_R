@@ -1,0 +1,206 @@
+@import "../styles/constant.scss";
+.wrapper {
+  position: relative;
+  z-index: 99;
+  transform: none;
+  position: sticky;
+  top: 0;
+  transition: 300ms ease;
+
+  .navBarOne {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    width: 100%;
+    background: $SecondaryColor;
+    position: relative;
+    top: -1.5rem;
+
+    .icon:hover {
+      color: $primaryColor;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+
+      li {
+        padding: 5px;
+      }
+    }
+
+    .flex2 {
+      span {
+        padding: 5px;
+        transition: $transition;
+
+        &:hover {
+          color: $color-primary;
+          background: transparent;
+          padding: 5px;
+          border: 1px solid $color-primary;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    top: -3rem;
+    justify-content: space-between;
+    font-weight: 500;
+
+    .navLogo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        width: 25%;
+        padding-right: 0px;
+        position: relative;
+        top: 1rem;
+        right: 3%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .logoText {
+        position: relative;
+        left: -5.5%;
+        top: 0rem;
+        transition: 0.3s ease-in-out;
+        @media (max-width: $sm) {
+          display: none;
+        }
+
+        h3 {
+          font-weight: 900;
+          transition: $transition;
+
+          &:hover {
+            color: $primaryColor;
+            cursor: pointer;
+          }
+        }
+        p {
+          font-weight: bolder;
+          font-size: 1rem;
+          color: $blackColor;
+          transition: $transition;
+
+          &:hover {
+            color: $hoverColor;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    ul {
+      .donate {
+        a {
+          position: relative;
+          display: inline-block;
+          width: 160px;
+          height: 50px;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+
+          span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 18px;
+
+            &:hover {
+              rotate: 360deg;
+            }
+
+            &:nth-child(2) {
+              color: #6c4ba5;
+              background: #fff;
+              overflow: hidden;
+              z-index: 2;
+              transition: 0.5s;
+              clip-path: polygon(60% 0, 100% 0%, 100% 100%, 60% 100%, 40% 53%);
+
+              &:hover {
+                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
+              }
+            }
+
+            &:nth-child(1):hover ~ span:nth-child(2) {
+              clip-path: polygon(
+                100% 0,
+                100% 0%,
+                100% 100%,
+                100% 100%,
+                100% 50%
+              );
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: $lg), (min-width: $xl), (min-width: $md) {
+      .menuIcon {
+        display: none;
+      }
+    }
+
+    .menu {
+      @media (max-width: $sm), (max-width: $md) {
+        position: absolute;
+        list-style: none;
+        gap: 2rem;
+        font-weight: 500;
+        flex-direction: column;
+        right: 0;
+        opacity: 1;
+        top: 2rem;
+        width: 50%;
+        height: 80vh;
+        min-width: 15rem;
+        background: white;
+        padding: 2rem;
+        display: flex;
+        border-radius: 2rem;
+        transition: all 300ms ease;
+        align-items: flex-start;
+        padding: 3rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+      }
+      text-transform: uppercase;
+      font-size: 1rem;
+      list-style: none;
+      gap: 1.5rem;
+      cursor: pointer;
+
+      li {
+        font-weight: 500;
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
